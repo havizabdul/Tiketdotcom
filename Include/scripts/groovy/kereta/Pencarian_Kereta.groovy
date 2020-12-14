@@ -70,11 +70,12 @@ class Pencarian_Kereta {
 		WebUI.setText(findTestObject('Object Repository/Object Kereta/input_Dari_input-airport'), 'gambir')
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Object Kereta/div_JakartaGambir'))
+		WebUI.delay(2)
 	}
 
 	@And("user memilih stasiun tujuan")
 	def user_memilih_stasiun_tujuan() {
-		WebUI.setText(findTestObject('Object Repository/New Folder/input_Ke_input-airport'), 'yogyakarta')
+		WebUI.setText(findTestObject('Object Repository/Object Kereta/input_Ke_input-airport'), 'yogyakarta')
 		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Object Kereta/div_YogyakartaYogyakarta'))
 		WebUI.delay(2)
