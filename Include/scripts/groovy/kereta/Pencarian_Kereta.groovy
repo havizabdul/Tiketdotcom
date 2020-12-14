@@ -57,6 +57,8 @@ class Pencarian_Kereta {
 	def user_memilih_menu_kereta_api() {
 		WebUI.click(findTestObject('Object Repository/Object Kereta/a_Tiket Kereta Api'))
 		WebUI.delay(2)
+		WebUI.scrollToElement(findTestObject('Object Repository/Object Kereta/label_Kereta Bandara'),3)
+		WebUI.delay(2)
 		WebUI.click(findTestObject('Object Repository/Object Kereta/button_OK'))
 		WebUI.delay(2)
 	}
@@ -65,17 +67,16 @@ class Pencarian_Kereta {
 	def user_memilih_stasiun_asal() {
 		WebUI.click(findTestObject('Object Repository/Object Kereta/input_Dari_input-airport'))
 		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/Object Kereta/div_GMR'))
+		WebUI.setText(findTestObject('Object Repository/Object Kereta/input_Dari_input-airport'), 'gambir')
 		WebUI.delay(2)
+		WebUI.click(findTestObject('Object Repository/Object Kereta/div_JakartaGambir'))
 	}
 
 	@And("user memilih stasiun tujuan")
 	def user_memilih_stasiun_tujuan() {
-		WebUI.mouseOver(findTestObject('Object Repository/Object Kereta/div_Bandung'))
+		WebUI.setText(findTestObject('Object Repository/New Folder/input_Ke_input-airport'), 'yogyakarta')
 		WebUI.delay(2)
-		WebUI.scrollToElement(findTestObject('Object Repository/Object Kereta/div_JakartaGambir'), 3)
-		WebUI.delay(2)
-		WebUI.click(findTestObject('Object Repository/Object Kereta/div_YK'))
+		WebUI.click(findTestObject('Object Repository/Object Kereta/div_YogyakartaYogyakarta'))
 		WebUI.delay(2)
 	}
 
@@ -96,5 +97,4 @@ class Pencarian_Kereta {
 		WebUI.click(findTestObject('Object Repository/Object Kereta/button_Cari Kereta Api'))
 		WebUI.delay(2)
 	}
-
 }
